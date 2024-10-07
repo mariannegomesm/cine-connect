@@ -1,13 +1,12 @@
-package com.example.cineconnection.ui.home
+package com.example.cineconnection.ui.movieDetails
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class HomeViewModel : ViewModel() {
-
+class MovieDetailsViewModel : ViewModel() {
     private val _text = MutableLiveData<String>().apply {
-        value = "" 
+        value = "Detalhes do Filme" 
     }
     val text: LiveData<String> = _text
 }
