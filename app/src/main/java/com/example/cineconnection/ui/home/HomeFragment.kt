@@ -25,7 +25,6 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        // Configurar os ouvintes de clique
         binding.divVerde.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_movieDetailsFragment)
         }
