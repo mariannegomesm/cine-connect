@@ -8,8 +8,10 @@
 
     <Button
         android:id="@+id/login_button"
-        android:layout_width="287dp"
-        android:layout_height="58dp"
+        android:layout_width="321dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginEnd="62dp"
         android:layout_marginBottom="9dp"
         android:text="Login"
         app:layout_constraintBottom_toTopOf="@+id/cadastro_link"
@@ -21,19 +23,19 @@
         android:id="@+id/cadastro_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
-        android:layout_marginBottom="177dp"
+        android:layout_marginBottom="172dp"
         android:text="Cadastre-se"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/login_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_button" />
 
     <EditText
         android:id="@+id/Email_login"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="321dp"
+        android:layout_height="64dp"
         android:layout_marginStart="45dp"
-        android:layout_marginTop="282dp"
+        android:layout_marginTop="277dp"
         android:layout_marginEnd="45dp"
         android:layout_marginBottom="19dp"
         android:ems="10"
@@ -41,14 +43,13 @@
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/senha_login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/senha_login"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="321dp"
+        android:layout_height="64dp"
         android:layout_marginStart="45dp"
         android:layout_marginEnd="45dp"
         android:layout_marginBottom="49dp"

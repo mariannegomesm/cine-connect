@@ -27,7 +27,7 @@
 
     <fragment
         android:id="@+id/cadastroFragment"
-        android:name="com.example.cineconnection.ui.login.CadastroFragment"
+        android:name="com.example.cineconnection.ui.cadastro.CadastroFragment"
         android:label="fragment_cadastro"
         tools:layout="@layout/fragment_cadastro" >
         <action
