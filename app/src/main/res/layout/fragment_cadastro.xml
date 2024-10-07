@@ -8,8 +8,8 @@
 
     <EditText
         android:id="@+id/editTextDate"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="321dp"
+        android:layout_height="64dp"
         android:layout_marginBottom="11dp"
         android:ems="10"
         android:hint="Data de Nascimento"
@@ -25,18 +25,18 @@
         android:layout_width="321dp"
         android:layout_height="64dp"
         android:layout_marginEnd="42dp"
-        android:layout_marginBottom="240dp"
+        android:layout_marginBottom="150dp"
         android:text="Cadastre-se"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.937"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_confirm" />
 
     <EditText
         android:id="@+id/nome_cadastro"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="321dp"
+        android:layout_height="64dp"
         android:layout_marginTop="105dp"
         android:layout_marginBottom="15dp"
         android:ems="10"
@@ -50,8 +50,8 @@
 
     <EditText
         android:id="@+id/Confirm_cadastro"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="321dp"
+        android:layout_height="64dp"
         android:layout_marginBottom="11dp"
         android:ems="10"
         android:hint="Senha"
@@ -64,8 +64,8 @@
 
     <EditText
         android:id="@+id/cadastro_email"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="321dp"
+        android:layout_height="64dp"
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="E-mail"
@@ -78,8 +78,8 @@
 
     <EditText
         android:id="@+id/password_confirm"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="321dp"
+        android:layout_height="64dp"
         android:layout_marginBottom="24dp"
         android:ems="10"
         android:hint="Confirme sua senha"
