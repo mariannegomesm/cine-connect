@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.cine_connect.R
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.button.MaterialButton
 
 class RateFragment : Fragment() {
@@ -30,6 +31,15 @@ class RateFragment : Fragment() {
         buttonRating.setOnClickListener {
             findNavController().navigate(R.id.action_rateFragment_to_homeFragment)
         }
+    }
+    override fun onResume() {
+        super.onResume()
+        activity?.findViewById<BottomNavigationView>(R.id.nav_view)?.visibility = View.VISIBLE
+    }
+
+    override fun onPause() {
+        super.onPause()
+        activity?.findViewById<BottomNavigationView>(R.id.nav_view)?.visibility = View.GONE
     }
 
 

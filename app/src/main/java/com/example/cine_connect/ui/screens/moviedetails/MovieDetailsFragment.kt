@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.example.cine_connect.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MovieDetailsFragment : Fragment() {
 
@@ -61,5 +62,15 @@ class MovieDetailsFragment : Fragment() {
 
     private fun deleteTopic() {
         Log.d("MovieDetailsFragment", "Tópico excluído")
+    } // Missing closing brace added here
+
+    override fun onResume() {
+        super.onResume()
+        activity?.findViewById<BottomNavigationView>(R.id.nav_view)?.visibility = View.VISIBLE
+    }
+
+    override fun onPause() {
+        super.onPause()
+        activity?.findViewById<BottomNavigationView>(R.id.nav_view)?.visibility = View.GONE
     }
 }

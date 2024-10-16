@@ -29,6 +29,8 @@
         seams, divides space, and indicates moving parts.\n\n
         …
     </string>
+    <string name="search">Search</string>
+    <string name="mensagens">Mensagens</string>
 
     <string name="movie_image">Descrição da imagem do filme</string>
 </resources>
