@@ -25,15 +25,17 @@ class IAFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Configurando o botão de ação
-        binding.buttonAction.setOnClickListener {
-            // Ação ao clicar no botão, por exemplo, navegar para outro fragmento
-            findNavController().navigate(R.id.action_iaFragment_to_homeFragment)
+        binding.buttonGenerate.setOnClickListener {
+            generateRecommendations()
         }
+    }
+
+    private fun generateRecommendations() {
+        binding.textViewRecommendations.text = "Aqui estão suas recomendações de filmes: ... (exemplo)"
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null // Libera o binding
+        _binding = null 
     }
 }

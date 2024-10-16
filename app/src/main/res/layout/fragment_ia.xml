@@ -12,7 +12,7 @@
             android:id="@+id/textViewTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/title_ia"
+            android:text="Recomendações de Filmes"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_gravity="center" />
@@ -21,16 +21,27 @@
             android:id="@+id/textViewDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Esta é a tela de Inteligência Artificial."
+            android:text="Descubra novos filmes com a ajuda da IA."
             android:textSize="16sp"
             android:layout_marginTop="16dp"
             android:layout_gravity="center" />
 
+        <TextView
+            android:id="@+id/textViewRecommendations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aqui aparecerão suas recomendações."
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            android:background="#F0F0F0"
+            android:padding="16dp"
+            android:layout_gravity="center" />
+
         <Button
-            android:id="@+id/buttonAction"
+            android:id="@+id/buttonGenerate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ação IA"
+            android:text="Gerar Recomendações"
             android:layout_marginTop="24dp"
             android:layout_gravity="center" />
     </LinearLayout>
