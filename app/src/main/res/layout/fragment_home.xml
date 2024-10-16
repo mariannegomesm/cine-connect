@@ -23,41 +23,39 @@
         android:paddingStart="32dp"
         android:paddingEnd="32dp">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+       <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-            <View
-                android:id="@+id/div1"
-                android:layout_width="150dp"
-                android:layout_height="250dp"
-                android:layout_marginEnd="16dp"
-                android:background="#F2E7C9"
-                android:clickable="true"
-                android:focusable="true"
-                android:contentDescription="Divisão de cartaz"/>
+        <ImageView
+            android:id="@+id/div1"
+            android:layout_width="140dp"
+            android:layout_height="210dp"
+            android:layout_marginEnd="16dp"
+            android:background="#f2f3f6"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Filme em cartaz"/>
 
-            <View
-                android:id="@+id/div2"
-                android:layout_width="150dp"
-                android:layout_height="250dp"
-                android:layout_marginEnd="16dp"
-                android:background="#F2E7C9"
-                android:clickable="true"
-                android:focusable="true"
-                android:contentDescription="Divisão de cartaz"/>
+        <ImageView
+            android:id="@+id/div2"
+            android:layout_width="140dp"
+            android:layout_height="210dp"
+            android:layout_marginEnd="16dp"
+            android:background="#f2f3f6"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Filme em cartaz"/>
 
-            <View
-                android:id="@+id/div3"
-                android:layout_width="150dp"
-                android:layout_height="250dp"
-                android:background="#F2E7C9"
-                android:clickable="true"
-                android:focusable="true"
-                android:contentDescription="Divisão de cartaz"/>
-
-
+        <ImageView
+            android:id="@+id/div3"
+            android:layout_width="140dp"
+            android:layout_height="210dp"
+            android:background="#f2f3f6"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Filme em cartaz"/>
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -85,34 +83,32 @@
 
             <View
                 android:id="@+id/div4"
-                android:layout_width="150dp"
-                android:layout_height="250dp"
+                android:layout_width="140dp"
+                android:layout_height="210dp"
                 android:layout_marginEnd="16dp"
-                android:background="#F2E7C9"
+                android:background="#f2f3f6"
                 android:clickable="true"
                 android:focusable="true"
                 android:contentDescription="Divisão de cartaz" />
 
             <View
                 android:id="@+id/div5"
-                android:layout_width="150dp"
-                android:layout_height="250dp"
+                android:layout_width="140dp"
+                android:layout_height="210dp"
                 android:layout_marginEnd="16dp"
-                android:background="#F2E7C9"
+                android:background="#f2f3f6"
                 android:clickable="true"
                 android:focusable="true"
                 android:contentDescription="Divisão de cartaz"/>
 
             <View
                 android:id="@+id/div6"
-                android:layout_width="150dp"
-                android:layout_height="250dp"
-                android:background="#F2E7C9"
+                android:layout_width="140dp"
+                android:layout_height="210dp"
+                android:background="#f2f3f6"
                 android:clickable="true"
                 android:focusable="true"
                 android:contentDescription="Divisão de cartaz"/>
-
-
         </LinearLayout>
     </HorizontalScrollView>
 

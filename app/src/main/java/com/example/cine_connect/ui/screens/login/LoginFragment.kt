@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.cine_connect.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.appcompat.app.AppCompatActivity
 
 class LoginFragment : Fragment() {
 
@@ -34,11 +35,29 @@ class LoginFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        activity?.findViewById<BottomNavigationView>(R.id.nav_view)?.visibility = View.GONE
+        hideBottomNavigation()
+        hideToolbar()
     }
 
     override fun onPause() {
         super.onPause()
+        showBottomNavigation()
+        showToolbar()
+    }
+
+    private fun hideBottomNavigation() {
+        activity?.findViewById<BottomNavigationView>(R.id.nav_view)?.visibility = View.GONE
+    }
+
+    private fun showBottomNavigation() {
         activity?.findViewById<BottomNavigationView>(R.id.nav_view)?.visibility = View.VISIBLE
+    }
+
+    private fun hideToolbar() {
+        (activity as? AppCompatActivity)?.supportActionBar?.hide()
+    }
+
+    private fun showToolbar() {
+        (activity as? AppCompatActivity)?.supportActionBar?.show()
     }
 }
