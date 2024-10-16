@@ -8,6 +8,7 @@ import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.cine_connect.R
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.button.MaterialButton
 
 class MovieDetailsFragment : Fragment() {
@@ -35,5 +36,14 @@ class MovieDetailsFragment : Fragment() {
             findNavController().navigate(R.id.action_movieDetailsFragment_to_listReviewsFragment)
             }
         return view
+    }
+    override fun onResume() {
+        super.onResume()
+        activity?.findViewById<BottomNavigationView>(R.id.nav_view)?.visibility = View.VISIBLE
+    }
+
+    override fun onPause() {
+        super.onPause()
+        activity?.findViewById<BottomNavigationView>(R.id.nav_view)?.visibility = View.GONE
     }
 }

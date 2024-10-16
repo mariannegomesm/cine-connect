@@ -80,5 +80,28 @@
         android:id="@+id/listReviewsFragment"
         android:name="com.example.cine_connect.ui.screens.listreviews.ListReviewsFragment"
         android:label="review_card"
-        tools:layout="@layout/review_card" />
+        tools:layout="@layout/review_card" >
+        <action
+            android:id="@+id/action_listReviewsFragment_to_rateFragment"
+            app:destination="@id/rateFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.cine_connect.ui.screens.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.cine_connect.ui.screens.search.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/messageFragment2"
+        android:name="com.example.cine_connect.ui.screens.message.MessageFragment"
+        android:label="Messages"
+        tools:layout="@layout/fragment_message" />
+
 </navigation>

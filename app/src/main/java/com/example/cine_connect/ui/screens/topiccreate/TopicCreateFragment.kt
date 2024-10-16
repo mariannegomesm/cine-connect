@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.cine_connect.R
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.button.MaterialButton
 
 class TopicCreateFragment : Fragment() {
@@ -23,5 +24,14 @@ class TopicCreateFragment : Fragment() {
         }
 
         return view
+    }
+    override fun onResume() {
+        super.onResume()
+        activity?.findViewById<BottomNavigationView>(R.id.nav_view)?.visibility = View.VISIBLE
+    }
+
+    override fun onPause() {
+        super.onPause()
+        activity?.findViewById<BottomNavigationView>(R.id.nav_view)?.visibility = View.GONE
     }
 }
