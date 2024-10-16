@@ -36,6 +36,9 @@
         <action
             android:id="@+id/action_homeFragment_to_movieDetailsFragment"
             app:destination="@id/movieDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_iaFragment"
+            app:destination="@id/iaFragment" />
     </fragment>
 
     <fragment
@@ -95,15 +98,9 @@
     </fragment>
 
     <fragment
-        android:id="@+id/homeFragment2"
-        android:name="com.example.cine_connect.ui.screens.home.HomeFragment"
-        android:label="Home"
-        tools:layout="@layout/fragment_home" />
-
-    <fragment
         android:id="@+id/searchFragment"
         android:name="com.example.cine_connect.ui.screens.search.SearchFragment"
-        android:label="Search"
+        android:label="Pesquisar"
         tools:layout="@layout/fragment_search" />
 
     <fragment
@@ -111,5 +108,15 @@
         android:name="com.example.cine_connect.ui.screens.message.MessageFragment"
         android:label="Messages"
         tools:layout="@layout/fragment_message" />
+
+    <fragment
+        android:id="@+id/iaFragment"
+        android:name="com.example.cine_connect.ui.screens.ia.IAFragment"
+        android:label="fragment_ia"
+        tools:layout="@layout/fragment_ia">
+        <action
+            android:id="@+id/action_iaFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 
 </navigation>

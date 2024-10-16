@@ -20,8 +20,29 @@ class MainActivity : AppCompatActivity() {
         val navController: NavController = navHostFragment.navController
 
         NavigationUI.setupWithNavController(binding.navView, navController)
-
         NavigationUI.setupActionBarWithNavController(this, navController)
+
+        binding.navView.setOnNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.navigation_home -> {
+                    navController.navigate(R.id.homeFragment)
+                    true
+                }
+                R.id.navigation_search -> {
+                    navController.navigate(R.id.searchFragment)
+                    true
+                }
+                R.id.navigation_message -> {
+                    navController.navigate(R.id.messageFragment2)
+                    true
+                }
+                R.id.navigation_ia -> {
+                    navController.navigate(R.id.iaFragment)
+                    true
+                }
+                else -> false
+            }
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
