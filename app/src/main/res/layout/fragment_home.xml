@@ -38,17 +38,17 @@
             android:focusable="true"
             android:contentDescription="Filme em cartaz"/>
 
-        <ImageView
-            android:id="@+id/div2"
-            android:layout_width="140dp"
-            android:layout_height="210dp"
-            android:layout_marginEnd="16dp"
-            android:background="#f2f3f6"
-            android:clickable="true"
-            android:focusable="true"
-            android:contentDescription="Filme em cartaz"/>
+           <ImageView
+               android:id="@+id/div2"
+               android:layout_width="140dp"
+               android:layout_height="210dp"
+               android:layout_marginEnd="16dp"
+               android:background="#f2f3f6"
+               android:clickable="true"
+               android:contentDescription="Filme em cartaz"
+               android:focusable="true" />
 
-        <ImageView
+           <ImageView
             android:id="@+id/div3"
             android:layout_width="140dp"
             android:layout_height="210dp"
