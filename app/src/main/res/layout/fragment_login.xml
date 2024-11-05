@@ -12,10 +12,10 @@
         android:layout_width="419dp"
         android:layout_height="357dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/cineconnect__11_"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cineconnect__13_" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -70,10 +70,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:hint="@string/email"
-            app:boxStrokeColor="#6200ed"
+            app:boxStrokeColor="#A30000"
+            app:cursorColor="#a30000"
+            app:hintTextColor="#a30000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView2">
+            app:layout_constraintTop_toBottomOf="@id/textView2"
+            app:startIconDrawable="@android:drawable/sym_action_email">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/emailEditText"
@@ -89,10 +92,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="@string/senha"
+            app:boxStrokeColor="#a30000"
+            app:cursorColor="#a30000"
             app:endIconMode="password_toggle"
+            app:hintTextColor="#a30000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/emailTextField">
+            app:layout_constraintTop_toBottomOf="@id/emailTextField"
+            app:startIconDrawable="@android:drawable/ic_lock_lock">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/passwordEditText"
@@ -106,9 +113,11 @@
             android:id="@+id/loginbutton"
             android:layout_width="0dp"
             android:layout_height="56dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="28dp"
             android:text="@string/entrar"
+            app:backgroundTint="#a30000"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/passwordTextField" />
 
