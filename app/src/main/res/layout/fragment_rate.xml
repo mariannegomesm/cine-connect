@@ -112,9 +112,9 @@
                 android:id="@+id/topic_description2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:hint="Escreva seu comentario aqui."
-                android:textSize="14sp"
-                android:layout_marginTop="8dp"/>
+                android:textSize="14sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
