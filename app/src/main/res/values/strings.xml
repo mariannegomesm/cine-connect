@@ -9,6 +9,8 @@
     <string name="email">Email</string>
     <string name="logue_se_agora_para_ter_acesso_a_toda_nossa_plataforma">Conecte-se com quem ama cinema e viva novas histórias</string>
     <string name="login">Login</string>
+    <string name="register">Cadastre-se</string>
+    <string name="register_description">Crie sua conta e comece a explorar filmes e conexões!</string>
     <string name="senha">Senha</string>
     <string name="entrar">Entrar</string>
     <string name="dummy_button">Dummy Button</string>
