@@ -4,10 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import com.example.cine_connect.R
+import androidx.lifecycle.lifecycleScope
 import com.example.cine_connect.databinding.FragmentIaBinding
+import com.google.ai.client.generativeai.GenerativeModel
+import kotlinx.coroutines.launch
 
 class IAFragment : Fragment() {
 
@@ -26,16 +28,42 @@ class IAFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonGenerate.setOnClickListener {
-            generateRecommendations()
+            lifecycleScope.launch {
+                val movieTitle = binding.editTextMovieName.text.toString()
+                if (movieTitle.isNotBlank()) {
+                    generateDescription(movieTitle)
+                } else {
+                    binding.textViewRecommendations.text = "Por favor, insira o nome de um filme."
+                }
+            }
         }
     }
 
-    private fun generateRecommendations() {
-        binding.textViewRecommendations.text = "Aqui estão suas recomendações de filmes: ... (exemplo)"
+    private suspend fun generateDescription(movieTitle: String) {
+        try {
+            val generativeModel = GenerativeModel(
+                modelName = "gemini-1.5-flash",
+                apiKey = "AIzaSyBiQ-4TwXJZ2WfGzCxQPK2tsNOGAB_T9qo"
+            )
+
+            val prompt = "Encontre uma curiosidade sobre o filme $movieTitle."
+
+            //
+
+           val response = generativeModel.generateContent(prompt)
+
+            val description = response?.text ?: "Descrição não encontrada."
+
+            binding.textViewRecommendations.text = description
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Toast.makeText(requireContext(), "Erro ao gerar descrição.", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null 
+        _binding = null
     }
 }

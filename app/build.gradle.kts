@@ -69,7 +69,10 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.12.0")
     implementation("com.google.firebase:firebase-auth-ktx:23.1.0")
     implementation("com.google.firebase:firebase-firestore-ktx:25.1.1")
+    implementation("com.google.ai.client.generativeai:generativeai:0.7.0")
     kapt("com.github.bumptech.glide:compiler:4.12.0")
+
+
 
     // Se quisermos implementar teste futuramente.
     testImplementation("junit:junit:4.13.2")
