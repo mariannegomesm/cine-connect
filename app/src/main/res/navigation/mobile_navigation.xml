@@ -104,8 +104,8 @@
         tools:layout="@layout/fragment_search" />
 
     <fragment
-        android:id="@+id/messageFragment2"
-        android:name="com.example.cine_connect.ui.screens.message.MessageFragment"
+        android:id="@+id/ProfileFragment"
+        android:name="com.example.cine_connect.ui.screens.profile.ProfileFragment"
         android:label="Messages"
         tools:layout="@layout/fragment_message" />
 

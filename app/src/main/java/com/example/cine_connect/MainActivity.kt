@@ -34,8 +34,8 @@ class MainActivity : AppCompatActivity() {
                     navController.navigate(R.id.searchFragment)
                     true
                 }
-                R.id.navigation_message -> {
-                    navController.navigate(R.id.messageFragment2)
+                R.id.navigation_profile -> {
+                    navController.navigate(R.id.ProfileFragment)
                     true
                 }
                 R.id.navigation_ia -> {
