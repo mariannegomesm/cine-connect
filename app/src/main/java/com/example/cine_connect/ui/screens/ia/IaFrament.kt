@@ -4,11 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.example.cine_connect.databinding.FragmentIaBinding
 import com.google.ai.client.generativeai.GenerativeModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class IAFragment : Fragment() {
@@ -46,19 +48,24 @@ class IAFragment : Fragment() {
                 apiKey = "AIzaSyBiQ-4TwXJZ2WfGzCxQPK2tsNOGAB_T9qo"
             )
 
-            val prompt = "Encontre uma curiosidade sobre o filme $movieTitle."
+            val prompt = "Fale uma curiosidade sobre o filme $movieTitle."
+            val response = generativeModel.generateContent(prompt)
+            val description = response?.text ?: "Curiosidade não encontrada."
 
-            //
 
-           val response = generativeModel.generateContent(prompt)
-
-            val description = response?.text ?: "Descrição não encontrada."
-
-            binding.textViewRecommendations.text = description
+            displayTextWithTypingEffect(description, binding.textViewRecommendations)
 
         } catch (e: Exception) {
             e.printStackTrace()
             Toast.makeText(requireContext(), "Erro ao gerar descrição.", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private suspend fun displayTextWithTypingEffect(text: String, textView: TextView) {
+        textView.text = ""
+        for (char in text) {
+            textView.append(char.toString())
+            delay(50)
         }
     }
 
