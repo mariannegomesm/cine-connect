@@ -7,12 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.RatingBar
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.cine_connect.R
 import com.google.android.material.button.MaterialButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import java.text.SimpleDateFormat
+import java.util.*
 
 class RateFragment : Fragment() {
 
@@ -35,6 +38,13 @@ class RateFragment : Fragment() {
 
         val commentEditText: EditText = view.findViewById(R.id.topic_coment)
         val ratingBar: RatingBar = view.findViewById(R.id.ratingBar)
+        val timestampTextView: TextView = view.findViewById(R.id.timestamp)
+
+        val currentTime = System.currentTimeMillis()
+        val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+        val formattedDate = sdf.format(Date(currentTime))
+
+        timestampTextView.text = "Assistido em: $formattedDate"
 
         val buttonRating: MaterialButton = view.findViewById(R.id.button_rating)
         buttonRating.setOnClickListener {
@@ -50,7 +60,8 @@ class RateFragment : Fragment() {
                     val review = hashMapOf(
                         "userId" to userId,
                         "review" to comment,
-                        "rating" to rating
+                        "rating" to rating,
+                        "timestamp" to currentTime
                     )
 
                     FirebaseFirestore.getInstance()

@@ -23,7 +23,7 @@
                 android:id="@+id/textViewDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Digite o nome de um filme para receber uma descrição."
+                android:text="Digite o nome de um filme para receber uma curiosidade."
                 android:textSize="16sp"
                 android:layout_marginTop="16dp"
                 android:layout_gravity="center" />
