@@ -65,7 +65,7 @@ class IAFragment : Fragment() {
         textView.text = ""
         for (char in text) {
             textView.append(char.toString())
-            delay(50)
+            delay(25)
         }
     }
 
