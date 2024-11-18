@@ -41,39 +41,11 @@
             android:layout_gravity="center"
             android:contentDescription="estrela">
 
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/star"
-                android:contentDescription="estrela" />
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="8dp"
-                android:src="@drawable/star"
-                android:contentDescription="estrela" />
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="8dp"
-                android:src="@drawable/star"
-                android:contentDescription="estrela" />
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="8dp"
-                android:src="@drawable/star"
-                android:contentDescription="estrela" />
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="8dp"
-                android:src="@drawable/star"
-                android:contentDescription="estrela" />
+            <TextView
+                android:id="@+id/rating_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
         </LinearLayout>
 
         <TextView
