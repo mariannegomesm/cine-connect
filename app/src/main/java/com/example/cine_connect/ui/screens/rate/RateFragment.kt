@@ -38,12 +38,12 @@ class RateFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         Log.d("RateFragment", "onViewCreated called")
 
-        // Pegando os argumentos passados
+
         val movieId = arguments?.getInt("movieId") ?: 0
         val movieTitle = arguments?.getString("movieTitle") ?: "Título do Filme"
         val posterUrl = arguments?.getString("posterUrl") ?: ""
 
-        // Referências de UI
+
         val commentEditText: EditText = view.findViewById(R.id.topic_coment)
         val ratingBar: RatingBar = view.findViewById(R.id.ratingBar)
         val timestampTextView: TextView = view.findViewById(R.id.timestamp)
@@ -77,11 +77,11 @@ class RateFragment : Fragment() {
                     Log.d("RateFragment", "User ID: $userId")
 
                     val review = hashMapOf(
-                        "userId" to userId,
                         "review" to comment,
                         "rating" to rating,
                         "timestamp" to currentTime,
-                        "movieId" to movieId
+                        "movieId" to movieId,
+                        "userId" to userId,
                     )
 
                     FirebaseFirestore.getInstance()
