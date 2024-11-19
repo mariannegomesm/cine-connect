@@ -23,6 +23,8 @@
     <string name="delete_confirmation_positive">Excluir</string>
     <string name="delete_confirmation_negative">Cancelar</string>
 
+    <string name="rating_text">%s</string>
+  
     <string name="large_text">
         Material is the metaphor.\n\n
         A material metaphor is the unifying theory of a rationalized space and a system of motion.
@@ -38,8 +40,6 @@
         …
     </string>
     <string name="search">Pesquisar</string>
-    <string name="mensagens">Mensagens</string>
-
     <string name="movie_image">Descrição da imagem do filme</string>
     <string name="title_ia">IA</string>
 </resources>

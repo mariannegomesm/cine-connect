@@ -9,10 +9,6 @@
         android:icon="@drawable/search_alt_svgrepo_com"
         android:title="@string/search" />
     <item
-        android:id="@+id/navigation_message"
-        android:icon="@drawable/message_square_svgrepo_com"
-        android:title="@string/mensagens" />
-    <item
         android:id="@+id/navigation_ia"
         android:icon="@drawable/ic_ia" 
         android:title="@string/title_ia" /> 

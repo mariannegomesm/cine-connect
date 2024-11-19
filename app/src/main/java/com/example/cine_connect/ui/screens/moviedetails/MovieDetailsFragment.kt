@@ -39,8 +39,9 @@ class MovieDetailsFragment : Fragment() {
         setupNavigationButtons(view)
 
 
-        setupDeleteButton(view, R.id.button_delete_topic)
-        setupDeleteButton(view, R.id.button_delete_topic2)
+
+        // setupDeleteButton(view, R.id.button_delete_topic)
+        // setupDeleteButton(view, R.id.button_delete_topic2)
 
 
         setupReviewsSection(view)
