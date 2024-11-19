@@ -34,15 +34,19 @@ class MainActivity : AppCompatActivity() {
                     navController.navigate(R.id.searchFragment)
                     true
                 }
-                R.id.navigation_message -> {
-                    navController.navigate(R.id.messageFragment2)
-                    true
-                }
                 R.id.navigation_ia -> {
                     navController.navigate(R.id.iaFragment)
                     true
                 }
                 else -> false
+            }
+        }
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if (destination.id == R.id.movieDetailsFragment) {
+                supportActionBar?.hide() // Esconde a ActionBar
+            } else {
+                supportActionBar?.show() // Exibe a ActionBar para outros fragments
             }
         }
     }

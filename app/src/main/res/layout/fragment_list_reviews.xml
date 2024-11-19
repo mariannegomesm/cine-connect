@@ -4,35 +4,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
+        android:id="@+id/reviews_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp">
-
-        <include
-            layout="@layout/review_card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-       <include
-            layout="@layout/review_card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <include
-            layout="@layout/review_card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <Button
-            android:id="@+id/add_reviews"
+    </LinearLayout>
+        <TextView
+            android:id="@+id/no_reviews_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_button_background"
-            app:icon="@drawable/plus_svgrepo_com__7_"
-            android:text="Criar"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_margin="32dp"/>
-    </LinearLayout>
+            android:text="Nenhuma review encontrada..."
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
 
+    <Button
+        android:id="@+id/add_reviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button_background"
+        app:icon="@drawable/plus_svgrepo_com__7_"
+        android:text="Criar"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="32dp"/>
 </FrameLayout>

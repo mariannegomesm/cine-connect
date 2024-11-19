@@ -9,13 +9,18 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.cine_connect.R
+import com.example.cine_connect.data.models.MovieDetailsResponse
+import com.example.cine_connect.network.TmdbApiClient
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.coroutines.launch
 
 class MovieDetailsFragment : Fragment() {
 
@@ -26,23 +31,28 @@ class MovieDetailsFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_moviedetails, container, false)
 
-        // Carregar a imagem se a URL estiver presente
-        val imageUrl = arguments?.getString("imageUrl")
-        if (imageUrl != null) {
-            loadImage(view, imageUrl)
-        } else {
-            Log.e("MovieDetailsFragment", "imageUrl is null")
-        }
 
-        // Configurar botões de navegação
+        val imageUrl = arguments?.getString("imageUrl")
+        imageUrl?.let { loadImage(view, it) }
+
+
         setupNavigationButtons(view)
 
-        // Configurar botões de exclusão
-        setupDeleteButton(view, R.id.button_delete_topic) 
-        setupDeleteButton(view, R.id.button_delete_topic2)
 
-        // Configurar seção de revisões
+
+        // setupDeleteButton(view, R.id.button_delete_topic)
+        // setupDeleteButton(view, R.id.button_delete_topic2)
+
+
         setupReviewsSection(view)
+
+
+        val movieId = arguments?.getInt("movieId") ?: -1
+        if (movieId != -1) {
+            fetchMovieDetails(movieId)
+        } else {
+            Log.e("MovieDetailsFragment", "ID do filme inválido")
+        }
 
         return view
     }
@@ -55,7 +65,17 @@ class MovieDetailsFragment : Fragment() {
     private fun setupNavigationButtons(view: View) {
         val buttonRating: MaterialButton = view.findViewById(R.id.button_rating)
         buttonRating.setOnClickListener {
-            findNavController().navigate(R.id.action_movieDetailsFragment_to_rateFragment)
+
+            val movieId = arguments?.getInt("movieId") ?: 0
+            val posterUrl = arguments?.getString("imageUrl") ?: ""
+            val movieTitle = arguments?.getString("movieTitle") ?: ""
+
+            val bundle = Bundle().apply {
+                putInt("movieId", movieId)
+                putString("posterUrl", posterUrl)
+                putString("movieTitle", movieTitle)
+            }
+            findNavController().navigate(R.id.action_movieDetailsFragment_to_rateFragment, bundle)
         }
 
         val buttonTopics: MaterialButton = view.findViewById(R.id.button_topics)
@@ -67,7 +87,16 @@ class MovieDetailsFragment : Fragment() {
     private fun setupReviewsSection(view: View) {
         val cardReviews: LinearLayout = view.findViewById(R.id.reviews_section)
         cardReviews.setOnClickListener {
-            findNavController().navigate(R.id.action_movieDetailsFragment_to_listReviewsFragment)
+            val movieId = arguments?.getInt("movieId") ?: 0
+            val posterUrl = arguments?.getString("imageUrl") ?: ""
+            val movieTitle = arguments?.getString("movieTitle") ?: ""
+
+                    val bundle = Bundle().apply{
+                    putInt("movieId", movieId)
+                    putString("posterUrl", posterUrl)
+                    putString("movieTitle", movieTitle)
+                }
+                findNavController().navigate(R.id.action_movieDetailsFragment_to_listReviewsFragment, bundle)
         }
     }
 
@@ -93,7 +122,29 @@ class MovieDetailsFragment : Fragment() {
 
     private fun deleteTopic() {
         Log.d("MovieDetailsFragment", "Tópico excluído")
-    } 
+    }
+
+    private fun fetchMovieDetails(movieId: Int) {
+        lifecycleScope.launch {
+            try {
+                val apiKey = "06ebff010c5d4faf628283ca3f1ac421"
+                val movieDetails = TmdbApiClient.apiService.getMovieDetails(movieId, apiKey, "pt-BR")
+                updateUI(movieDetails)
+            } catch (e: Exception) {
+                Log.e("MovieDetailsFragment", "Erro ao buscar detalhes do filme: ${e.message}")
+            }
+        }
+    }
+
+    private fun updateUI(details: MovieDetailsResponse) {
+        val titleTextView = view?.findViewById<TextView>(R.id.titlemovie)
+        val ratingTextView = view?.findViewById<TextView>(R.id.describemovie)
+        val descriptionTextView = view?.findViewById<TextView>(R.id.descricaotext)
+
+        titleTextView?.text = details.title
+        ratingTextView?.text = getString(R.string.rating_text, details.vote_average.toString())
+        descriptionTextView?.text = details.overview
+    }
 
     override fun onResume() {
         super.onResume()

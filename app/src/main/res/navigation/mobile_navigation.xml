@@ -44,8 +44,10 @@
     <fragment
         android:id="@+id/movieDetailsFragment"
         android:name="com.example.cine_connect.ui.screens.moviedetails.MovieDetailsFragment"
-        android:label="fragment_moviedetails"
         tools:layout="@layout/fragment_moviedetails">
+        <argument
+            android:name="imageUrl"
+            app:argType="string"/>
         <action
             android:id="@+id/action_movieDetailsFragment_to_rateFragment"
             app:destination="@id/rateFragment" />

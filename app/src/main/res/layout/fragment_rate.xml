@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".ui.screens.rate.RateFragment">
+    tools:context="ui.screens.rate.RateFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,24 +12,23 @@
         android:orientation="horizontal"
         android:layout_marginTop="50dp">
 
-        <View
-            android:id="@+id/div1"
-            android:layout_width="60dp"
+        <ImageView
+            android:id="@+id/posterImageView"
+            android:layout_width="80dp"
             android:layout_height="120dp"
             android:layout_marginHorizontal="32dp"
-            android:background="#F2E7C9"
-            android:clickable="true"
-            android:contentDescription="Divisão de cartaz"
-            android:focusable="true" />
+            android:contentDescription="Cartaz do Filme"
+            android:scaleType="centerCrop" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/titlefilmecreatereview"
             android:layout_width="wrap_content"
             android:layout_marginTop="50dp"
             android:textStyle="bold"
             android:textSize="25sp"
             android:layout_height="wrap_content"
-            android:text="Titulo do Filme" />
+            android:text="Título do Filme" />
+
 
     </LinearLayout>
 
@@ -39,43 +38,19 @@
         android:padding="20dp"
         android:orientation="horizontal"
         android:layout_marginTop="16dp"
-        android:contentDescription="estrela"
+        android:contentDescription="stars"
         >
 
-        <ImageView
-            android:layout_marginLeft="12dp"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/star"
-            android:contentDescription="estrela"/>
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:rating="0"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"/>
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="8dp"
-            android:src="@drawable/star"
-            android:contentDescription="estrela"/>
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="8dp"
-            android:src="@drawable/star"
-            android:contentDescription="estrela"/>
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="8dp"
-            android:src="@drawable/star"
-            android:contentDescription="estrela"/>
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="8dp"
-            android:src="@drawable/black_star_icon"
-            android:contentDescription="estrelapreta"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -84,11 +59,13 @@
         android:layout_marginTop="10dp"
         android:layout_marginHorizontal="32dp">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Assistido em: 10/10/2024" />
+        <TextView
+            android:id="@+id/timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Assistido em: "
+            android:textSize="16sp"
+            android:layout_margin="16dp" />
 
     </LinearLayout>
 
@@ -108,13 +85,20 @@
             android:padding="16dp">
 
 
-            <TextView
-                android:id="@+id/topic_description2"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/topic_coment"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Escreva seu comentario aqui."
+                android:hint="Escreva seu comentário aqui."
                 android:textSize="14sp"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginTop="8dp"
+                android:inputType="textMultiLine"
+                android:maxLines="5"
+                android:minLines="3"
+                android:scrollbars="vertical"
+                android:background="@android:color/transparent"
+                android:gravity="top|start" />
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -125,7 +109,7 @@
         android:layout_height="wrap_content"
         android:text="Postar avaliação"
         android:layout_marginHorizontal="32dp"
-        android:backgroundTint="#7678ed"
+        android:backgroundTint="#A30000"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         android:layout_marginBottom="50dp"/>

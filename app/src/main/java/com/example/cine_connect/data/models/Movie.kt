@@ -1,5 +1,5 @@
-package com.example.cine_connect.data.models
+package com.example.cine_connect.models
 
-data class Movie(
-    val id: Int
-)
+
+
+data class Movie(val id: Int, val posterPath: String)

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Cinne Connect</string>
+    <string name="app_name">Cine Connect</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -9,12 +9,22 @@
     <string name="email">Email</string>
     <string name="logue_se_agora_para_ter_acesso_a_toda_nossa_plataforma">Conecte-se com quem ama cinema e viva novas histórias</string>
     <string name="login">Login</string>
+    <string name="register">Cadastre-se</string>
+    <string name="register_description">Crie sua conta e comece a explorar filmes e conexões!</string>
     <string name="senha">Senha</string>
     <string name="entrar">Entrar</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="rating_text">Avaliação: %s</string>
+    <string name="delete_confirmation_title">Confirmar Exclusão</string>
+    <string name="delete_confirmation_message">Você tem certeza que deseja excluir este tópico?</string>
+    <string name="delete_confirmation_positive">Excluir</string>
+    <string name="delete_confirmation_negative">Cancelar</string>
+
+    <string name="rating_text">%s</string>
+  
     <string name="large_text">
         Material is the metaphor.\n\n
         A material metaphor is the unifying theory of a rationalized space and a system of motion.
@@ -30,8 +40,6 @@
         …
     </string>
     <string name="search">Pesquisar</string>
-    <string name="mensagens">Mensagens</string>
-
     <string name="movie_image">Descrição da imagem do filme</string>
     <string name="title_ia">IA</string>
 </resources>
