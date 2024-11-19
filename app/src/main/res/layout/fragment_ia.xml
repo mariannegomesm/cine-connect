@@ -1,49 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <TextView
-            android:id="@+id/textViewTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Recomendações de Filmes"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_gravity="center" />
-
-        <TextView
-            android:id="@+id/textViewDescription"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Descubra novos filmes com a ajuda da IA."
-            android:textSize="16sp"
-            android:layout_marginTop="16dp"
-            android:layout_gravity="center" />
-
-        <TextView
-            android:id="@+id/textViewRecommendations"
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Aqui aparecerão suas recomendações."
-            android:textSize="16sp"
-            android:layout_marginTop="24dp"
-            android:background="#F0F0F0"
-            android:padding="16dp"
-            android:layout_gravity="center" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <Button
-            android:id="@+id/buttonGenerate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gerar Recomendações"
-            android:layout_marginTop="24dp"
-            android:layout_gravity="center" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Curiosidades sobre os filmes"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
 
+            <TextView
+                android:id="@+id/textViewDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Digite o nome de um filme para receber uma curiosidade."
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center" />
+
+            <EditText
+                android:id="@+id/editTextMovieName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome do filme"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:background="#F0F0F0"/>
+
+            <TextView
+                android:id="@+id/textViewRecommendations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aqui aparecerá a descrição do filme."
+                android:textSize="16sp"
+                android:layout_marginTop="24dp"
+                android:background="#F0F0F0"
+                android:padding="16dp"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/buttonGenerate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gerar Descrição"
+                android:layout_marginTop="24dp"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 </layout>

@@ -14,4 +14,6 @@ object TmdbApiClient {
                 .build()
                 .create(TmdbApiService::class.java)
     }
+
 }
+

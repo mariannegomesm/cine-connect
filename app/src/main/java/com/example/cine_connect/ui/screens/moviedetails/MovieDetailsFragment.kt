@@ -39,6 +39,7 @@ class MovieDetailsFragment : Fragment() {
         setupNavigationButtons(view)
 
 
+
         // setupDeleteButton(view, R.id.button_delete_topic)
         // setupDeleteButton(view, R.id.button_delete_topic2)
 
@@ -86,7 +87,16 @@ class MovieDetailsFragment : Fragment() {
     private fun setupReviewsSection(view: View) {
         val cardReviews: LinearLayout = view.findViewById(R.id.reviews_section)
         cardReviews.setOnClickListener {
-            findNavController().navigate(R.id.action_movieDetailsFragment_to_listReviewsFragment)
+            val movieId = arguments?.getInt("movieId") ?: 0
+            val posterUrl = arguments?.getString("imageUrl") ?: ""
+            val movieTitle = arguments?.getString("movieTitle") ?: ""
+
+                    val bundle = Bundle().apply{
+                    putInt("movieId", movieId)
+                    putString("posterUrl", posterUrl)
+                    putString("movieTitle", movieTitle)
+                }
+                findNavController().navigate(R.id.action_movieDetailsFragment_to_listReviewsFragment, bundle)
         }
     }
 

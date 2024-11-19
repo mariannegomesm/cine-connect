@@ -33,4 +33,5 @@ interface TmdbApiService {
         @Query("api_key") apiKey: String,
         @Query("language") language: String = "pt-BR"
     ): MovieDetailsResponse
+
 }

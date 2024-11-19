@@ -56,6 +56,7 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 
     // Outras dependências
+    implementation ("com.google.android.material:material:1.9.0")
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
@@ -69,7 +70,10 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.12.0")
     implementation("com.google.firebase:firebase-auth-ktx:23.1.0")
     implementation("com.google.firebase:firebase-firestore-ktx:25.1.1")
+    implementation("com.google.ai.client.generativeai:generativeai:0.7.0")
     kapt("com.github.bumptech.glide:compiler:4.12.0")
+
+
 
     // Se quisermos implementar teste futuramente.
     testImplementation("junit:junit:4.13.2")
