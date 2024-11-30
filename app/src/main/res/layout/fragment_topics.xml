@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.screens.topics.TopicsFragment"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/topics_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:orientation="vertical" />
+        <Button
+            android:id="@+id/add_topics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Criar"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="32dp" />
+
+
+</LinearLayout>
+

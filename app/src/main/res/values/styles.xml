@@ -1,0 +1,8 @@
+<resources>
+
+    <style name="Widget.Theme.Cineconnect.ButtonBar.Fullscreen" parent="">
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+</resources>
+
+

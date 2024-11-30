@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.screens.home.HomeFragment">
+
+    <!-- Título Filmes em Cartaz -->
+    <TextView
+        android:id="@+id/filmescartazedit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Filmes em cartaz"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold" />
+
+    <!-- RecyclerView para Filmes em Cartaz -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/filmesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:orientation="horizontal" />
+
+    <!-- Título Filmes Populares -->
+    <TextView
+        android:id="@+id/filmespopularesedit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="78dp"
+        android:text="Filmes Populares"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold" />
+
+    <!-- RecyclerView para Filmes Populares -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/filmesPopularesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:orientation="horizontal" />
+
+</LinearLayout>
