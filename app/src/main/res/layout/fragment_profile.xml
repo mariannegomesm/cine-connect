@@ -13,6 +13,7 @@
         android:orientation="vertical"
         android:padding="16dp">
 
+
         <!-- CardView para a Imagem de Perfil -->
         <androidx.cardview.widget.CardView
             android:layout_width="150dp"

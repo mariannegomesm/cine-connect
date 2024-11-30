@@ -17,16 +17,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <View
-                android:id="@+id/div1"
-                android:layout_width="300dp"
-                android:layout_height="450dp"
-                android:layout_marginTop="68dp"
-                android:layout_marginHorizontal="60dp"
-                android:background="#F2E7C9"
-                android:clickable="true"
-                android:focusable="true"
-                android:contentDescription="Divisão de cartaz"/>
+            <ImageView
+                android:id="@+id/banner_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="Banner do filme" />
 
             <TextView
                 android:id="@+id/titlemovie"
@@ -67,12 +64,17 @@
                 android:orientation="vertical"
                 android:padding="16dp">
 
-                <TextView
-                    android:id="@+id/topic_title_describe"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <EditText
+                    android:id="@+id/topic_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:hint="Digite o titulo do seu tópico aqui"
                     android:textSize="14sp"
+                    android:inputType="textMultiLine"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:scrollbars="vertical"
+                    android:background="@android:color/transparent"
                     android:layout_marginTop="8dp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -101,13 +103,19 @@
                 android:orientation="vertical"
                 android:padding="16dp">
 
-                <TextView
+                <EditText
                     android:id="@+id/topic_description"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="Digite o titulo do seu tópico aqui"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textMultiLine"
+                    android:maxLines="5"
+                    android:minLines="1"
+                    android:scrollbars="vertical"
+                    android:background="@android:color/transparent"
+                    android:hint="Digite a descrição do seu tópico aqui"
                     android:textSize="14sp"
-                    android:layout_marginTop="8dp"/>
+                    android:layout_marginTop="8dp"
+                    android:gravity="top|start"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <com.google.android.material.button.MaterialButton
@@ -117,7 +125,6 @@
             android:layout_height="wrap_content"
             android:text="Postar Tópico"
             android:layout_marginHorizontal="32dp"
-            android:backgroundTint="#7678ed"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:layout_marginBottom="50dp"/>

@@ -57,7 +57,7 @@ class EditProfileFragment : Fragment() {
         }
     }
 
-    // Método para permitir que o usuário escolha uma imagem da galeria
+
     private fun pickImageFromGallery() {
         val intent = Intent(Intent.ACTION_PICK).apply {
             type = "image/*"
