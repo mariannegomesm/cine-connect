@@ -31,7 +31,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.cine_connect.ui.screens.home.HomeFragment"
-        android:label="fragment_home"
+        android:label=""
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_movieDetailsFragment"
@@ -73,7 +73,7 @@
     <fragment
         android:id="@+id/topicsFragment"
         android:name="com.example.cine_connect.ui.screens.topics.TopicsFragment"
-        android:label="fragment_topics"
+        android:label=""
         tools:layout="@layout/fragment_topics">
 
             <argument
@@ -93,7 +93,7 @@
     <fragment
         android:id="@+id/topicCreateFragment"
         android:name="com.example.cine_connect.ui.screens.topiccreate.TopicCreateFragment"
-        android:label="fragment_topic_create"
+        android:label=""
         tools:layout="@layout/fragment_topic_create">
         <action
             android:id="@+id/action_topicCreateFragment_to_homeFragment"

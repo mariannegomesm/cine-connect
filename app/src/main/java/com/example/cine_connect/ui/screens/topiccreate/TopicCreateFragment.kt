@@ -43,15 +43,15 @@ class TopicCreateFragment : Fragment() {
 
         val topicEditText: EditText = view.findViewById(R.id.topic_edit_text)
         val descriptionEditText: EditText = view.findViewById(R.id.topic_description)
-        val bannerImageView: ImageView = view.findViewById(R.id.banner_image)
+        // val bannerImageView: ImageView = view.findViewById(R.id.banner_image)
 
-        val titleTextView: TextView = view.findViewById(R.id.titlemovie)
-        titleTextView.text = movieTitle
-        if (bannerUrl.isNotEmpty()) {
-            Glide.with(this)
-                .load(bannerUrl)
-                .into(bannerImageView)
-        }
+        // val titleTextView: TextView = view.findViewById(R.id.titlemovie)
+        // titleTextView.text = movieTitle
+        // if (bannerUrl.isNotEmpty()) {
+        //     Glide.with(this)
+        //         .load(bannerUrl)
+        //         .into(bannerImageView)
+        // }
 
         val currentTime = System.currentTimeMillis()
         val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
