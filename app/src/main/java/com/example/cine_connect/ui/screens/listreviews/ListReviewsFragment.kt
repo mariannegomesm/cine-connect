@@ -44,7 +44,16 @@ class ListReviewsFragment : Fragment() {
 
         val buttonReview: Button = view.findViewById(R.id.add_reviews)
         buttonReview.setOnClickListener {
-            findNavController().navigate(R.id.action_listReviewsFragment_to_rateFragment)
+            val movieId = arguments?.getInt("movieId") ?: 0
+            val posterUrl = arguments?.getString("posterUrl") ?: ""
+            val movieTitle = arguments?.getString("movieTitle") ?: ""
+
+            val bundle = Bundle().apply {
+                putInt("movieId", movieId)
+                putString("posterUrl", posterUrl)
+                putString("movieTitle", movieTitle)
+            }
+            findNavController().navigate(R.id.action_listReviewsFragment_to_rateFragment, bundle)
         }
 
         return view
