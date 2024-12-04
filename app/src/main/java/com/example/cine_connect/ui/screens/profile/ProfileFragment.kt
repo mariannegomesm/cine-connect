@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,10 +19,10 @@ import com.squareup.picasso.Picasso
 
 class ProfileFragment : Fragment() {
 
-    private lateinit var nameTextField: EditText
-    private lateinit var emailTextField: EditText
-    private lateinit var birthdateTextField: EditText
-    private lateinit var descriptionTextField: EditText
+    private lateinit var nameTextField: TextView
+    private lateinit var emailTextField: TextView
+    private lateinit var birthdateTextField: TextView
+    private lateinit var descriptionTextField: TextView
     private lateinit var profileImageView: ImageView
     private lateinit var favoritesRecyclerView: RecyclerView
 
@@ -36,9 +37,8 @@ class ProfileFragment : Fragment() {
 
         nameTextField = view.findViewById(R.id.NomeTextField)
         emailTextField = view.findViewById(R.id.EmailTextField)
-        birthdateTextField = view.findViewById(R.id.BirthdateTextField)
         descriptionTextField = view.findViewById(R.id.userDescribeTextField)
-        profileImageView = view.findViewById(R.id.imageView2)
+        profileImageView = view.findViewById(R.id.profilePhoto)
 
 
         favoritesRecyclerView = view.findViewById(R.id.favoritesRecyclerView)
@@ -74,23 +74,18 @@ class ProfileFragment : Fragment() {
         currentUser?.let { user ->
             val userId = user.uid
 
-            // Buscar dados do usuário no Firestore
             db.collection("users").document(userId).get()
                 .addOnSuccessListener { document ->
                     if (document != null) {
                         val name = document.getString("nome")
                         val email = document.getString("email")
-                        val birthdate = document.getString("dataNascimento")
                         val description = document.getString("descrição")
                         val profileImageUrl = document.getString("profileImageUrl")
 
-                        // Preencher os campos de perfil
                         nameTextField.setText(name)
                         emailTextField.setText(email)
-                        birthdateTextField.setText(birthdate)
                         descriptionTextField.setText(description)
 
-                        // Carregar a imagem de perfil usando Picasso
                         profileImageUrl?.let {
                             Picasso.get().load(it).into(profileImageView)
                         }

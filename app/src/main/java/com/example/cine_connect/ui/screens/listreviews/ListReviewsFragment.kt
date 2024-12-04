@@ -44,7 +44,16 @@ class ListReviewsFragment : Fragment() {
 
         val buttonReview: Button = view.findViewById(R.id.add_reviews)
         buttonReview.setOnClickListener {
-            findNavController().navigate(R.id.action_listReviewsFragment_to_rateFragment)
+            val movieId = arguments?.getInt("movieId") ?: 0
+            val posterUrl = arguments?.getString("posterUrl") ?: ""
+            val movieTitle = arguments?.getString("movieTitle") ?: ""
+
+            val bundle = Bundle().apply {
+                putInt("movieId", movieId)
+                putString("posterUrl", posterUrl)
+                putString("movieTitle", movieTitle)
+            }
+            findNavController().navigate(R.id.action_listReviewsFragment_to_rateFragment, bundle)
         }
 
         return view
@@ -110,7 +119,7 @@ class ListReviewsFragment : Fragment() {
                 val reviewDescription = reviewView.findViewById<TextView>(R.id.review_description1)
                 val ratingBar = reviewView.findViewById<RatingBar>(R.id.ratingBar)
 
-                reviewCreator.text = "/@${review.creator}"
+                reviewCreator.text = "${review.creator}"
                 reviewDescription.text = review.description
                 ratingBar.rating = review.rating
 

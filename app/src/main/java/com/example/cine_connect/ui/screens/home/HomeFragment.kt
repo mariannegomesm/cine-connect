@@ -51,7 +51,7 @@ class HomeFragment : Fragment() {
             if (movies.isNotEmpty()) {
                 movieNowPlaying.clear()
                 movieNowPlaying.addAll(
-                    movies.map { Movie(it.id, "https://image.tmdb.org/t/p/w500${it.poster_path}") }
+                    movies.map { Movie(it.id, "https://image.tmdb.org/t/p/w500${it.poster_path}", it.title,it.overview) }
                 )
                 movieAdapterNowPlaying.notifyDataSetChanged()
             }
@@ -62,7 +62,7 @@ class HomeFragment : Fragment() {
             if (movies.isNotEmpty()) {
                 moviePopular.clear()
                 moviePopular.addAll(
-                    movies.map { Movie(it.id, "https://image.tmdb.org/t/p/w500${it.poster_path}") }
+                    movies.map { Movie(it.id, "https://image.tmdb.org/t/p/w500${it.poster_path}",it.title,it.overview) }
                 )
                 movieAdapterPopular.notifyDataSetChanged()
             }
@@ -73,6 +73,7 @@ class HomeFragment : Fragment() {
 
     private fun navigateToDetails(movie: Movie) {
         val bundle = Bundle().apply {
+            putString("movieTitle",movie.movieTitle)
             putInt("movieId", movie.id)
             putString("imageUrl", movie.posterPath)
         }

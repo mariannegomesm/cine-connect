@@ -48,16 +48,16 @@ class RateFragment : Fragment() {
         val ratingBar: RatingBar = view.findViewById(R.id.ratingBar)
         val timestampTextView: TextView = view.findViewById(R.id.timestamp)
         val titleTextView: TextView = view.findViewById(R.id.titlefilmecreatereview)
-        val posterImageView: ImageView = view.findViewById(R.id.posterImageView)
+        // val posterImageView: ImageView = view.findViewById(R.id.posterImageView)
 
         titleTextView.text = movieTitle
 
 
-        if (posterUrl.isNotEmpty()) {
-            Glide.with(this)
-                .load(posterUrl)
-                .into(posterImageView)
-        }
+        // if (posterUrl.isNotEmpty()) {
+        //     Glide.with(this)
+        //         .load(posterUrl)
+        //         .into(posterImageView)
+        // }
 
         val currentTime = System.currentTimeMillis()
         val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
