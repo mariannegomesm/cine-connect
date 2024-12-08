@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".ui.screens.topics.TopicsFragment">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background='#8E0000'
+		android:gravity="start|center_vertical"
+		android:orientation="horizontal"
+		android:paddingLeft="32dp"
+		android:paddingTop="8dp"
+		android:paddingRight="32dp"
+		android:paddingBottom="8dp">
+
+		<TextView
+			android:id="@+id/textView_venom"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginEnd="16dp"
+			android:text="Venom"
+			android:textColor="#ffffff"
+			android:textColorLink="#FFFFFF"
+			android:textSize="14sp" />
+
+		<TextView
+			android:id="@+id/textView_venom2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginEnd="16dp"
+			android:text=">"
+			android:textColor="#ffffff"
+			android:textSize="14sp"
+			android:textStyle="bold" />
+
+		<TextView
+			android:id="@+id/textView_all_topics"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Últimos tópicos"
+			android:textColor="#ffffff"
+			android:textColorLink="#FFFFFF"
+			android:textSize="14sp"
+			android:textStyle="normal" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="32dp"
+		android:layout_marginTop="32dp"
+		android:layout_marginEnd="32dp"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+
+		<ImageView
+			android:id="@+id/imageView6"
+			android:layout_width="24dp"
+			android:layout_height="24dp"
+			android:layout_marginEnd="8dp"
+			android:src="@android:drawable/stat_notify_chat"
+			android:tint="#a80000" />
+
+		<TextView
+			android:id="@+id/textView3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Lista de tópicos"
+			android:textSize="24sp"
+			android:textStyle="bold" />
+	</LinearLayout>
+
+	<TextView
+		android:id="@+id/textView4"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="32dp"
+		android:layout_marginLeft="32dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginRight="32dp"
+		android:layout_marginBottom="32dp"
+		android:text="Veja a lista de todos os tópicos relacionado ao filme que selecionou. Participe e crie um novo."
+		android:textSize="14sp" />
+
+	<LinearLayout
+		android:id="@+id/topics_container"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="32dp"
+		android:layout_marginEnd="32dp"
+		android:orientation="vertical" />
+
+	<Button
+		android:id="@+id/add_topics"
+		android:layout_width="match_parent"
+		android:layout_height="56dp"
+		android:layout_gravity="end|bottom"
+		android:layout_marginStart="32dp"
+		android:layout_marginTop="24dp"
+		android:layout_marginEnd="32dp"
+		android:text="Criar novo tópico" />
+</LinearLayout>

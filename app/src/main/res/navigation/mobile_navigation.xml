@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.cine_connect.ui.screens.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_cadastroFragment4"
+            app:destination="@id/cadastroFragment4" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cadastroFragment4"
+        android:name="com.example.cine_connect.ui.cadastro.CadastroFragment"
+        android:label="fragment_cadastro"
+        tools:layout="@layout/fragment_cadastro">
+        <action
+            android:id="@+id/action_cadastroFragment4_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.cine_connect.ui.screens.home.HomeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_iaFragment"
+            app:destination="@id/iaFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="com.example.cine_connect.ui.screens.moviedetails.MovieDetailsFragment"
+        tools:layout="@layout/fragment_moviedetails">
+        <argument
+            android:name="imageUrl"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_rateFragment"
+            app:destination="@id/rateFragment" />
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_topicsFragment"
+            app:destination="@id/topicsFragment" />
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_listReviewsFragment"
+            app:destination="@id/listReviewsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/rateFragment"
+        android:name="com.example.cine_connect.ui.screens.rate.RateFragment"
+        android:label=""
+        tools:layout="@layout/fragment_rate">
+        <action
+            android:id="@+id/action_rateFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/topicsFragment"
+        android:name="com.example.cine_connect.ui.screens.topics.TopicsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_topics">
+
+        <action
+            android:id="@+id/action_topicsFragment_to_topicDialoguesFragment"
+            app:destination="@id/topicDialoguesFragment" />
+
+            <argument
+                android:name="movieId"
+                app:argType="integer" />
+            <argument
+                android:name="posterUrl"
+                app:argType="string" />
+            <argument
+                android:name="movieTitle"
+                app:argType="string" />
+            <action
+                android:id="@+id/action_topicsFragment_to_topicCreateFragment"
+                app:destination="@id/topicCreateFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/topicCreateFragment"
+        android:name="com.example.cine_connect.ui.screens.topiccreate.TopicCreateFragment"
+        android:label=""
+        tools:layout="@layout/fragment_topic_create">
+        <action
+            android:id="@+id/action_topicCreateFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listReviewsFragment"
+        android:name="com.example.cine_connect.ui.screens.listreviews.ListReviewsFragment"
+        android:label=""
+        tools:layout="@layout/review_card" >
+        <action
+            android:id="@+id/action_listReviewsFragment_to_rateFragment"
+            app:destination="@id/rateFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.cine_connect.ui.screens.search.SearchFragment"
+        android:label="Pesquisar"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_moviedetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/iaFragment"
+        android:name="com.example.cine_connect.ui.screens.ia.IAFragment"
+        tools:layout="@layout/fragment_ia">
+        <action
+            android:id="@+id/action_iaFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.cine_connect.ui.screens.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            />
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.cine_connect.ui.screens.editprofile.EditProfileFragment"
+        android:label="editprofile_fragment"
+        tools:layout="@layout/fragment_edit_profile">
+
+        <action
+            android:id="@+id/action_editProfileFragment_to_Profile"
+            app:destination="@id/profileFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/topicDialoguesFragment"
+        android:name="com.example.cine_connect.ui.screens.topicDialogues.TopicDialoguesFragment"
+        android:label="fragment_topic_dialogues"
+        tools:layout="@layout/topic_dialogues">
+        <argument
+            android:name="movieId"
+            app:argType="integer" />
+        <argument
+            android:name="topicId"
+            app:argType="string" />
+    </fragment>
+</navigation>

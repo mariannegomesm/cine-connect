@@ -1,0 +1,150 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.screens.topiccreate.TopicCreateFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background='#8E0000'
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="32dp"
+            android:paddingTop="8dp"
+            android:paddingRight="32dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/textView_venom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="Venom"
+                android:textColor="#ffffff"
+                android:textColorLink="#FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView_venom2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text=">"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_all_topics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Criar um tópico"
+                android:textColor="#ffffff"
+                android:textColorLink="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@android:drawable/stat_notify_chat"
+                android:tint="#a80000" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Novo tópico"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="32dp"
+            android:text="Deseja iniciar uma discussão sobre o filme selecionado? Preencha os campos abaixo."
+            android:textSize="14sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/topicTitleTextField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="32dp"
+            android:hint="Título"
+            app:boxStrokeColor="#a30000"
+            app:cursorColor="#a30000"
+            app:hintTextColor="#a30000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/topic_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f2f3f6"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/topicDescriptionTextField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp"
+            android:hint="Descrição"
+            app:boxStrokeColor="#a30000"
+            app:cursorColor="#a30000"
+            app:hintTextColor="#a30000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/topic_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f2f3f6"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:gravity="top|start"
+                android:singleLine="false" 
+                android:maxLines="10"
+                android:minLines="8"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_topic"
+            android:layout_marginTop="12dp"
+            android:layout_height="56dp"
+            android:layout_width="match_parent"
+            android:text="Criar tópico"
+            android:layout_marginHorizontal="32dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:backgroundTint="#a30000"
+            android:layout_marginBottom="50dp" />
+
+    </LinearLayout>
+</ScrollView>
