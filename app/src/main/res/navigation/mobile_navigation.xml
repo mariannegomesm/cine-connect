@@ -76,6 +76,10 @@
         android:label=""
         tools:layout="@layout/fragment_topics">
 
+        <action
+            android:id="@+id/action_topicsFragment_to_topicDialoguesFragment"
+            app:destination="@id/topicDialoguesFragment" />
+
             <argument
                 android:name="movieId"
                 app:argType="integer" />
@@ -122,7 +126,6 @@
     <fragment
         android:id="@+id/iaFragment"
         android:name="com.example.cine_connect.ui.screens.ia.IAFragment"
-        android:label="fragment_ia"
         tools:layout="@layout/fragment_ia">
         <action
             android:id="@+id/action_iaFragment_to_homeFragment"
@@ -153,5 +156,17 @@
             android:id="@+id/action_editProfileFragment_to_Profile"
             app:destination="@id/profileFragment"
             />
+    </fragment>
+    <fragment
+        android:id="@+id/topicDialoguesFragment"
+        android:name="com.example.cine_connect.ui.screens.topicDialogues.TopicDialoguesFragment"
+        android:label="fragment_topic_dialogues"
+        tools:layout="@layout/topic_dialogues">
+        <argument
+            android:name="movieId"
+            app:argType="integer" />
+        <argument
+            android:name="topicId"
+            app:argType="string" />
     </fragment>
 </navigation>

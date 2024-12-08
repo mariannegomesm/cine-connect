@@ -33,6 +33,13 @@ class IAFragment : Fragment() {
             lifecycleScope.launch {
                 val movieTitle = binding.editTextMovieName.text.toString()
                 if (movieTitle.isNotBlank()) {
+                    binding.aichatid.visibility = View.VISIBLE
+                    binding.textViewRecommendations.visibility = View.VISIBLE
+
+                    // Esconde os elementos de alerta
+                    binding.Imagealert.visibility = View.GONE
+                    binding.textalert.visibility = View.GONE
+
                     generateDescription(movieTitle)
                 } else {
                     binding.textViewRecommendations.text = "Por favor, insira o nome de um filme."
@@ -51,7 +58,6 @@ class IAFragment : Fragment() {
             val prompt = "Fale uma curiosidade sobre o filme $movieTitle."
             val response = generativeModel.generateContent(prompt)
             val description = response?.text ?: "Curiosidade não encontrada."
-
 
             displayTextWithTypingEffect(description, binding.textViewRecommendations)
 

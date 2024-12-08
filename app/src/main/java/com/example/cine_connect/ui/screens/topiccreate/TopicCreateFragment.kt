@@ -34,6 +34,18 @@ class TopicCreateFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        // val bannerImageView: ImageView = view.findViewById(R.id.banner_image)
+        // val titleTextView: TextView = view.findViewById(R.id.titlemovie)
+        // titleTextView.text = movieTitle
+        // if (bannerUrl.isNotEmpty()) {
+        //     Glide.with(this)
+        //         .load(bannerUrl)
+        //         .into(bannerImageView)
+        // }
+        fun onPause() {
+            super.onPause()
+            Log.d("TopicCreateFragment", "onPause called")
+        }
         super.onViewCreated(view, savedInstanceState)
         Log.d("TopicCreateFragment", "onViewCreated called")
 
@@ -43,15 +55,7 @@ class TopicCreateFragment : Fragment() {
 
         val topicEditText: EditText = view.findViewById(R.id.topic_edit_text)
         val descriptionEditText: EditText = view.findViewById(R.id.topic_description)
-        // val bannerImageView: ImageView = view.findViewById(R.id.banner_image)
 
-        // val titleTextView: TextView = view.findViewById(R.id.titlemovie)
-        // titleTextView.text = movieTitle
-        // if (bannerUrl.isNotEmpty()) {
-        //     Glide.with(this)
-        //         .load(bannerUrl)
-        //         .into(bannerImageView)
-        // }
 
         val currentTime = System.currentTimeMillis()
         val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
@@ -73,8 +77,9 @@ class TopicCreateFragment : Fragment() {
                         "movieId" to movieId,
                         "timestamp" to currentTime,
                         "title" to topicContent,
-                        "userId" to userId
+                        "userId" to userId,
                     )
+
 
                     FirebaseFirestore.getInstance()
                         .collection("movies_topics")
@@ -95,15 +100,10 @@ class TopicCreateFragment : Fragment() {
                 Log.d("TopicCreateFragment", "User not authenticated")
             }
         }
-    }
+        fun onStart() {
+            super.onStart()
+            Log.d("TopicCreateFragment", "onStart called")
+        }
 
-    override fun onStart() {
-        super.onStart()
-        Log.d("TopicCreateFragment", "onStart called")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.d("TopicCreateFragment", "onPause called")
     }
 }
