@@ -156,14 +156,4 @@ class MovieDetailsFragment : Fragment() {
         ratingTextView?.text = getString(R.string.rating_text, details.vote_average.toString())
         descriptionTextView?.text = details.overview
     }
-
-    override fun onResume() {
-        super.onResume()
-        activity?.findViewById<BottomNavigationView>(R.id.nav_view)?.visibility = View.VISIBLE
-    }
-
-    override fun onPause() {
-        super.onPause()
-        activity?.findViewById<BottomNavigationView>(R.id.nav_view)?.visibility = View.GONE
-    }
 }

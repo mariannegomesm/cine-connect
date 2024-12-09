@@ -1,11 +1,55 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.screens.search.SearchFragment"
-    android:layout_marginHorizontal="16dp">
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
 
+<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="32dp"
+		android:layout_marginTop="32dp"
+		android:layout_marginEnd="32dp"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+
+		<ImageView
+			android:id="@+id/imageView6"
+			android:layout_width="24dp"
+			android:layout_height="24dp"
+			android:layout_marginEnd="8dp"
+			android:src="@android:drawable/stat_notify_chat"
+			android:tint="#a80000" />
+
+	<TextView
+		android:id="@+id/textView3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Pesquisar filme"
+		android:textSize="24sp"
+		android:textStyle="bold" />
+	</LinearLayout>
+
+	<TextView
+		android:id="@+id/textView4"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="32dp"
+		android:layout_marginLeft="32dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginEnd="32dp"
+		android:layout_marginRight="32dp"
+		android:text="Fique por dentro  dos seus filmes e séries favoritas!  Saiba mais detalhes pesquisando o nome abaixo."
+		android:textSize="14sp" />
+
+<FrameLayout
+	android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	tools:context=".ui.screens.search.SearchFragment">
+
+	
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -13,38 +57,38 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingHorizontal="32dp">
 
-
-            <androidx.cardview.widget.CardView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:padding="10dp"
-                app:cardCornerRadius="200dp"
-                android:layout_marginTop="20dp">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/border_background"
+                android:orientation="vertical"
+                android:padding="8dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
+					<EditText
+						android:id="@+id/editTextSearch"
+						android:layout_width="0dp"
+						android:layout_height="40dp"
+						android:layout_marginHorizontal="6dp"
+						android:layout_weight="1"
+						android:background="@android:color/transparent"
+						android:hint="Nome do filme"
+						android:inputType="text"
+						android:paddingStart="8dp"
+						android:textAlignment="viewStart"
+						android:textSize="14sp" />
 
-                    <EditText
-                        android:id="@+id/editTextSearch"
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_weight="1"
-                        android:layout_marginHorizontal="6dp"
-                        android:background="@android:color/transparent"
-                        android:hint="Digite o nome do filme"
-                        android:inputType="text"
-                        android:textSize="14sp"
-                        android:textAlignment="viewStart"
-                        android:paddingStart="8dp"/>
-
-
-                    <ImageView
+					<ImageView
                         android:id="@+id/iconSearch"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
@@ -52,34 +96,35 @@
                         android:contentDescription="Search Icon"
                         android:src="@drawable/search_svgrepo_com" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewSearch"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="8dp"
                 android:clipToPadding="false"
+                android:padding="8dp"
                 android:scrollbars="vertical" />
 
             <ImageView
                 android:id="@+id/Imagealert"
-                android:layout_marginTop="100dp"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:src="@drawable/speech_bubble_with_ellipsis_svgrepo_com__1_"/>
+                android:layout_marginTop="100dp"
+                android:src="@drawable/speech_bubble_with_ellipsis_svgrepo_com__1_" />
+
             <TextView
                 android:id="@+id/textalert"
-                android:layout_marginTop="10dp"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
                 android:layout_gravity="center"
-                android:text="Busque um filme que desejar!"/>
+                android:layout_marginTop="10dp"
+                android:text="Busque um filme que desejar!"
+                android:textAlignment="center" />
         </LinearLayout>
-
 
     </ScrollView>
 
 </FrameLayout>
+	</LinearLayout>

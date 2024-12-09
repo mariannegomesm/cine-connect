@@ -6,16 +6,34 @@
     android:orientation="vertical"
     tools:context=".ui.screens.home.HomeFragment">
 
-    <!-- Título Filmes em Cartaz -->
-    <TextView
-        android:id="@+id/filmescartazedit"
-        android:layout_width="wrap_content"
+    <!-- Container do Título Filmes em Cartaz -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="32dp"
-        android:text="Filmes em cartaz"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textStyle="bold" />
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Ícone -->
+        <ImageView
+            android:id="@+id/iconFilmesCartaz"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_dialog_dialer"
+            android:tint="#a80000" /> <!-- Substitua pelo ícone desejado -->
+            android:contentDescription="@string/ic_filme_cartaz_desc" />
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/filmescartazedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Filmes em cartaz"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <!-- RecyclerView para Filmes em Cartaz -->
     <androidx.recyclerview.widget.RecyclerView
@@ -27,16 +45,34 @@
         android:paddingEnd="32dp"
         android:orientation="horizontal" />
 
-    <!-- Título Filmes Populares -->
-    <TextView
-        android:id="@+id/filmespopularesedit"
-        android:layout_width="wrap_content"
+    <!-- Container do Título Filmes Populares -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="78dp"
-        android:text="Filmes Populares"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textStyle="bold" />
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Ícone -->
+        <ImageView
+            android:id="@+id/iconFilmesPopulares"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/star_big_off"
+            android:tint="#a80000" /> 
+            android:contentDescription="@string/ic_filme_populares_desc" />
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/filmespopularesedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Filmes populares"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <!-- RecyclerView para Filmes Populares -->
     <androidx.recyclerview.widget.RecyclerView
