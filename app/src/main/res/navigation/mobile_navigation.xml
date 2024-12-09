@@ -160,7 +160,7 @@
     <fragment
         android:id="@+id/topicDialoguesFragment"
         android:name="com.example.cine_connect.ui.screens.topicDialogues.TopicDialoguesFragment"
-        android:label="fragment_topic_dialogues"
+        android:label=""
         tools:layout="@layout/topic_dialogues">
         <argument
             android:name="movieId"
