@@ -70,7 +70,6 @@ class TopicDialoguesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         chatAdapter = ChatMessageAdapter(messages)
         recyclerView.adapter = chatAdapter
 
