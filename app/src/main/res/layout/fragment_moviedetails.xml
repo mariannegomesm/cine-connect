@@ -32,50 +32,25 @@
 		<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="24dp" android:layout_marginTop="24dp" android:gravity="center" android:orientation="horizontal">
 			<LinearLayout android:layout_width="0dp" android:layout_height="92dp" android:layout_weight="1" android:background="@drawable/border_background" android:orientation="vertical">
 				<TextView android:id="@+id/name_member" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="22dp" android:layout_marginTop="22dp" android:layout_marginBottom="8dp" android:text="Membros" android:textSize="16sp" android:textStyle="bold" android:textColor="#000000" />
-				<TextView android:id="@+id/number_member" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="22dp" android:text="20k" android:textSize="16sp" />
+				<TextView android:id="@+id/number_member" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="22dp" android:text="-" android:textSize="16sp" />
 			</LinearLayout>
 			<View android:layout_width="16dp" android:layout_height="match_parent" />
 			<LinearLayout android:id="@+id/reviews_section" android:layout_width="0dp" android:layout_height="92dp" android:layout_weight="1" android:background="@drawable/border_background" android:orientation="vertical">
 				<TextView android:id="@+id/name_reviews" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="22dp" android:layout_marginTop="22dp" android:layout_marginBottom="8dp" android:text="Reviews" android:textSize="16sp" android:textStyle="bold" android:textColor="#000000" />
-				<TextView android:id="@+id/number_reviews" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="22dp" android:text="2k" android:textSize="16sp" />
+				<TextView android:id="@+id/number_reviews" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="22dp" android:text="-" android:textSize="16sp" />
 			</LinearLayout>
 		</LinearLayout>
 		<!-- Tópicos -->
 		<TextView android:id="@+id/topics_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="24dp" android:layout_marginTop="32dp" android:text="Tópicos" android:textColor="#000000" android:textSize="20sp" android:textStyle="bold" />
-		<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="24dp" android:layout_marginTop="8dp" android:orientation="vertical" android:background="@drawable/border_background" android:padding="8dp">
-			<!-- Card de tópico -->
-			<LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="8dp" android:orientation="horizontal" android:padding="8dp">
-				<!-- Coluna 1: Ícone de mensagem -->
-				<LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="8dp" android:background="@drawable/rounded_background" android:gravity="center" android:padding="8dp">
-					<!-- Ícone de mensagem -->
-					<ImageView android:layout_width="25dp" android:layout_height="25dp" android:contentDescription="Ícone de mensagem" android:src="@drawable/ic_file" android:tint="#949494" />
-				</LinearLayout>
-				<!-- Coluna 2: Título e descrição -->
-				<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:layout_marginEnd="32dp" android:layout_weight="1" android:gravity="center_vertical" android:orientation="vertical">
-					<TextView android:id="@+id/topic_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="O filme não é tão ruim" android:textColor="#626262" android:textSize="16sp" android:textStyle="bold" />
-					<TextView android:id="@+id/topic_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry..." android:textColor="#888888" android:textSize="12sp" />
-				</LinearLayout>
-				<!-- Coluna 3: Lixeira -->
-				<ImageButton android:id="@+id/button_delete_topic" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_trash" android:contentDescription="Excluir tópico" android:background="?android:attr/selectableItemBackgroundBorderless" android:layout_gravity="center_vertical" />
-			</LinearLayout>
-		</LinearLayout>
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="24dp" android:layout_marginTop="8dp" android:orientation="vertical" android:background="@drawable/border_background" android:padding="8dp">
-			<!-- Card de tópico -->
-			<LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="8dp" android:orientation="horizontal" android:padding="8dp">
-				<!-- Coluna 1: Ícone de mensagem -->
-				<LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="8dp" android:background="@drawable/rounded_background" android:gravity="center" android:padding="8dp">
-					<!-- Ícone de mensagem -->
-					<ImageView android:layout_width="25dp" android:layout_height="25dp" android:contentDescription="Ícone de mensagem" android:src="@drawable/ic_file" android:tint="#949494" />
-				</LinearLayout>
-				<!-- Coluna 2: Título e descrição -->
-				<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:layout_marginEnd="32dp" android:layout_weight="1" android:gravity="center_vertical" android:orientation="vertical">
-					<TextView android:id="@+id/topic_title2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="O filme é bem legal" android:textColor="#626262" android:textSize="16sp" android:textStyle="bold" />
-					<TextView android:id="@+id/topic_description2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry..." android:textColor="#888888" android:textSize="12sp" />
-				</LinearLayout>
-				<!-- Coluna 3: Lixeira -->
-				<ImageButton android:id="@+id/button_delete_topic2" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_trash" android:contentDescription="Excluir tópico" android:background="?android:attr/selectableItemBackgroundBorderless" android:layout_gravity="center_vertical" />
-			</LinearLayout>
-		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/topics_containerDetails"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+
+			android:layout_marginTop="16dp"
+			android:layout_marginStart="32dp"
+			android:layout_marginEnd="32dp"
+			android:orientation="vertical" />
 		<com.google.android.material.button.MaterialButton android:id="@+id/button_topics" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginHorizontal="24dp" android:layout_marginTop="32dp" android:backgroundTint="#A30000" android:text="Ver todos os Tópicos" android:textColor="#FFFFFF" android:textStyle="bold" />
 		<com.google.android.material.button.MaterialButton android:id="@+id/button_rating" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginHorizontal="24dp" android:layout_marginBottom="90dp" android:backgroundTint="#007678ED" android:text="Avaliar" android:textColor="#a30000" android:elevation="0dp" android:stateListAnimator="@null" android:textStyle="bold" />
 	</LinearLayout>
